@@ -1,0 +1,1 @@
+(()=>{"use strict";new Swiper(".swiper-container",{loop:!0,autoplay:{delay:7e3,disableOnInteraction:!1},autoHeight:!0,slidesPerView:"auto",cssWidthAndHeight:!0,visibilityFullFit:!0,autoResize:!1,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-control__next",prevEl:".swiper-control__prev"}})})();

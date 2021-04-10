@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <title>Test-Frontend</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- <header class="page-header header">
+        <div class="header__logo">
+          <a href="#"
+            ><img src="./assets/images/logo.svg" alt="Логотип сайта"
+          /></a>
+        </div>
+
+        <ul class="header__nav nav">
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--active">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Отрасли применения</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Возможности печати</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Специальные предложения</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Готовые штампы</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Видео</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </header> -->
+
+      <div class="swiper-container">
+        <div class="swiper-text">
+          <div class="swiper-text__tag">Adidas</div>
+          <p class="swiper-text__tagline">
+            Твоё воображение — место твоей силы, у которой нет границ
+          </p>
+
+          <div class="swiper-text__main">
+            <h2 class="swiper-text__heading">Выбери свою игру</h2>
+            <p class="swiper-text__link">
+              <a href="#">Выбрать</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/images/slider-photo-1.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/slider-photo-2.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/slider-photo-1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-control swiper-control__prev">
+          <img
+            src="./assets/images/icons/arrow-prev.svg"
+            alt="Следующий слайд"
+          />
+        </div>
+        <div class="swiper-control swiper-control__next">
+          <img
+            src="./assets/images/icons/arrow-next.svg"
+            alt="Предыдущий слайд"
+          />
+        </div>
+      </div>
+
+      <section class="page-news content-wrapper">
+        <h2 class="page-news__heading heading">Новости</h2>
+        <div class="page-news__cards-container">
+          <a href="#">
+            <article class="news-card">
+              <div class="news-card__text-container">
+                <h3 class="news-card__heading">
+                  Атлантис-Пак на CFIA-2019: юбилейное участие
+                </h3>
+                <p class="news-card__text">
+                  Пятый раз компания «Атлантис-Пак» приняла участие в выставке
+                  во Франции (Ренн)
+                </p>
+              </div>
+              <div class="news-card__image-container">
+                <!-- <img
+                  src="/assets/images/news-image-1.png"
+                  alt="Фото к новости Атлантик-Пак"
+                  class="news-card__image"
+                /> -->
+              </div>
+            </article>
+          </a>
+
+          <a href="#">
+            <article class="news-card">
+              <div class="news-card__text-container">
+                <h3 class="news-card__heading">
+                  Стартап Deliveroo с инвестициями Amazon отчитался о миллионных
+                  убытках перед IPO
+                </h3>
+                <p class="news-card__text">
+                  Компания понесла убытки несмотря на рост выручки и объема
+                  операций. Однако гендиректор Deliveroo Уилл Шу заявил, что
+                  считает приоритетным расширение компании
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <a href="#">
+            <article class="news-card">
+              <div class="news-card__text-container">
+                <h3 class="news-card__heading">
+                  Стартап Deliveroo с инвестициями Amazon отчитался о миллионных
+                  убытках перед IPO
+                </h3>
+                <p class="news-card__text">
+                  Компания Uber Technologies объявила, что выделит подразделение
+                  по производству роботов-курьеров Postmates X в отдельную
+                  компанию Serve Robotics.
+                </p>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <ul class="page-news__nav news-nav">
+          <li class="news-nav__item news-nav__item--active">
+            <a href="#">1</a>
+          </li>
+          <li class="news-nav__item"><a href="#">2</a></li>
+          <li class="news-nav__item"><a href="#">3</a></li>
+        </ul>
+      </section>
+
+      <section class="page-last-news last-news">
+        <div class="content-wrapper">
+          <ul class="last-news__breadcrumbs last-news-breadcrumbs">
+            <li class="last-news-breadcrumbs__item"><a href="#">Главная</a></li>
+            <li class="last-news-breadcrumbs__item"><a href="#">Новости</a></li>
+          </ul>
+
+          <h2 class="last-news__heading heading">
+            Атлантис-Пак приглашает на IFFA-2019
+          </h2>
+          <p class="last-news__date">29 март / 2019</p>
+          <p class="last-news__text-intro">
+            Компания «Атлантис-Пак» примет участие в выставке IFFA-2019, которая
+            будет проходить во Франкфурте-на-Майне с 4 по 9 мая. «Атлантис-Пак»
+            является постоянным участником выставки на протяжении многих лет —
+            это будет уже 8 выставка IFFA для компании.
+          </p>
+        </div>
+
+        <img
+          class="last-news__image content-wrapper--full"
+          src="./assets/images/latest-news.png"
+          alt="Фото здания компании Атлантис-Пак"
+        />
+
+        <div class="content-wrapper">
+          <p class="last-news__text">
+            Девиз «Атлантис-Пак» на IFFA-2019 – «Сохранение природы никогда ещё
+            не было таким прибыльным». Акцент на бережном отношении компании к
+            природе не случаен. По сравнению с другими способами производства
+            упаковочных решений, при производстве инновационных плёнок, оболочек
+            и пакетов «Атлантис-Пак» расходуется значительно меньше водных
+            ресурсов. Плёнки АМИСТАЙЛ имеют очень маленькую толщину (от 30 мкм),
+            но по техническим показателям соответствуют материалам в 1,5-2 раза
+            толще.
+          </p>
+
+          <table class="last-news__table table-resizable">
+            <thead>
+              <tr>
+                <th>Значение 1</th>
+                <th>Значение 2</th>
+                <th>Значение 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Adidas</td>
+                <td>Table Generator plugin automates</td>
+                <td>43</td>
+              </tr>
+              <tr>
+                <td>Puma</td>
+                <td>Copy paste the data</td>
+                <td>35</td>
+              </tr>
+              <tr>
+                <td>Nike</td>
+                <td>For updates to the plugin</td>
+                <td>36</td>
+              </tr>
+              <tr>
+                <td>New Balance</td>
+                <td>The plugin provides the custom</td>
+                <td>33</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="table-overflowed">
+            <table class="last-news__table">
+              <thead>
+                <tr>
+                  <th>Значение 1</th>
+                  <th>Значение 2</th>
+                  <th>Значение 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adidas</td>
+                  <td>Table Generator plugin automates</td>
+                  <td>43</td>
+                </tr>
+                <tr>
+                  <td>Puma</td>
+                  <td>Copy paste the data</td>
+                  <td>35</td>
+                </tr>
+                <tr>
+                  <td>Nike</td>
+                  <td>For updates to the plugin</td>
+                  <td>36</td>
+                </tr>
+                <tr>
+                  <td>New Balance</td>
+                  <td>The plugin provides the custom</td>
+                  <td>33</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-catalog catalog content-wrapper">
+        <h2 class="catalog__heading heading">Каталог</h2>
+        <div class="catalog__container">
+          <ul class="catalog__categories">
+            <li class="catalog__categories-item">
+              <a href="#">Проницаемые колбасные оболочки</a>
+            </li>
+
+            <li class="catalog__categories-item">
+              <a href="#">Термоусадочные пакеты</a>
+            </li>
+
+            <li class="catalog__categories-item"><a href="#">Плёнки</a></li>
+
+            <li class="catalog__categories-item">
+              <a href="#">Новые продукты</a>
+            </li>
+
+            <li class="catalog__categories-item">
+              <a href="#"> Упаковка для молочной отрасли</a>
+            </li>
+          </ul>
+
+          <ul class="catalog__products">
+            <li class="catalog__products-item product">
+              <img
+                src="./assets/images/product-pic.png"
+                alt="Фото товара"
+                class="product__image"
+              />
+              <p class="product__name">Диплекс-Мини</p>
+            </li>
+
+            <li class="catalog__products-item product">
+              <img
+                src="./assets/images/product-pic.png"
+                alt="Фото товара"
+                class="product__image"
+              />
+              <p class="product__name">Айцел</p>
+            </li>
+
+            <li class="catalog__products-item product">
+              <img
+                src="./assets/images/product-pic.png"
+                alt="Фото товара"
+                class="product__image"
+              />
+              <p class="product__name">Айцел Премиум-Синюга</p>
+            </li>
+
+            <li class="catalog__products-item product">
+              <img
+                src="./assets/images/product-pic.png"
+                alt="Фото товара"
+                class="product__image"
+              />
+              <p class="product__name">Амисмок</p>
+            </li>
+
+            <li class="catalog__products-item product">
+              <img
+                src="./assets/images/product-pic.png"
+                alt="Фото товара"
+                class="product__image"
+              />
+              <p class="product__name">Амитан</p>
+            </li>
+
+            <li class="catalog__products-item product">
+              <img
+                src="./assets/images/product-pic.png"
+                alt="Фото товара"
+                class="product__image"
+              />
+              <p class="product__name">Диплекс</p>
+            </li>
+
+            <li class="catalog__products-item product">
+              <img
+                src="./assets/images/product-pic.png"
+                alt="Фото товара"
+                class="product__image"
+              />
+              <p class="product__name">Фибросмок</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="page-footer footer">
+        <div class="footer__main">
+          <div class="footer__nav-container">
+            <h3 class="footer__heading">Главная</h3>
+          </div>
+
+          <div class="footer__nav-container">
+            <h3 class="footer__heading"><a href="#">Компания</a></h3>
+            <ul class="footer__nav">
+              <li class="footer__link"><a href="#">О компании</a></li>
+              <li class="footer__link"><a href="#">История Атлантис-Пак</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__career">
+          <div class="footer__nav-container">
+            <h3 class="footer__heading"><a href="#">Карьера</a></h3>
+            <ul class="footer__nav">
+              <li class="footer__link">
+                <a href="#">Преимущества работы в Атлантис-Пак</a>
+              </li>
+              <li class="footer__link"><a href="#">Обучение и развитие</a></li>
+              <li class="footer__link"><a href="#">Вакансии</a></li>
+              <li class="footer__link"><a href="#">Истории успеха</a></li>
+              <li class="footer__link">
+                <a href="#">Политика в области управления персоналом</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Результаты спецоценки условий труда</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__aside">
+          <div class="footer__nav-container">
+            <h3 class="footer__heading">
+              <a href="#">Упаковка по функционалу</a>
+            </h3>
+            <ul class="footer__nav">
+              <li class="footer__link"><a href="#">Для мясной отрасли</a></li>
+              <li class="footer__link"><a href="#">Для молочной отрасли</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__nav-container">
+            <h3 class="footer__heading"><a href="#">Пресс-центр</a></h3>
+            <ul class="footer__nav">
+              <li class="footer__link"><a href="#">Новости</a></li>
+              <li class="footer__link"><a href="#">Видео и фильмы</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="dist/main.js"></script>
+  </body>
+</html>
