@@ -8,8 +8,9 @@
   list-style-type: none;
   width: 100%;
 
-  
   @media (max-width: 800px) {
+    display: block;
+    height: 60px;
     visibility: hidden;
   }
 
