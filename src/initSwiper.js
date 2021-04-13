@@ -1,14 +1,12 @@
+import Swiper from 'swiper/bundle';
+import initNavbar from './navbar';
+
 const swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: {
     delay: 7000,
     disableOnInteraction: false,
   },
-  autoHeight: true,
-  slidesPerView: 'auto',
-  cssWidthAndHeight: true,
-  visibilityFullFit: true,
-  autoResize: false,
 
   pagination: {
     el: '.swiper-pagination',

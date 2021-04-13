@@ -1,0 +1,21 @@
+// Product Component
+
+.product-card {
+  align-items: center;
+  border-bottom: 0.5px solid var(--color-light-grey);
+  display: flex;
+  height: 88px;
+  padding: 16px;
+
+  &__name {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 16px;
+  }
+
+  &:hover {
+    background-color: var(--color-light-blue);
+    cursor: pointer;
+  }
+}

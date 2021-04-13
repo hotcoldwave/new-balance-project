@@ -1,0 +1,97 @@
+// News Card Component
+
+.news-card {
+  border: 1px solid var(--color-red);
+  border-radius: 10px;
+  display: flex;
+  font-family: 'Avenir Next', sans-serif;
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
+
+  &__text-container {
+    margin-right: 20px;
+    padding-left: 64px;
+
+    @media (max-width: 913px) {
+      padding-left: 30px;
+    }
+    @media (max-width: 700px) {
+      padding-left: 19px;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 32px 0 30px;
+    max-width: 520px;
+
+    @media (max-width: 870px) {
+      font-size: 18px;
+      margin: 26px 0 24px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 16px 0 18px;
+    }
+  }
+
+  &__text {
+    color: var(--color-text-grey-1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 25px;
+
+    @media (max-width: 870px) {
+      font-size: 15px;
+      line-height: 21px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 14px;
+    }
+  }
+
+  &__image-container {
+    flex: 0 0 33.33%;
+    min-height: 197px;
+    position: relative;
+
+    @media (max-width: 800px) {
+      min-height: unset;
+    }
+  }
+
+  &__image {
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media (max-width: 800px) {
+      border-radius: 0;
+      max-height: 45%;
+      position: inherit;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    cursor: pointer;
+
+    .news-card__text {
+      color: inherit;
+    }
+  }
+}

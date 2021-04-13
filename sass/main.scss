@@ -1,5 +1,21 @@
+// @import 'mixins';
 @import 'typography';
 @import 'base';
 @import 'layout';
-@import 'swiper-styles';
-@import 'components';
+
+// Components
+
+@import './components/header';
+@import './components/navigation';
+@import './components/swiper';
+
+@import './components/news-card';
+@import './components/news-nav';
+
+@import './components/news-breadcrumbs';
+@import './components/last-news';
+
+@import './components/catalog';
+@import './components/product-card';
+
+@import './components/footer';

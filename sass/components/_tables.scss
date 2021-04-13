@@ -1,0 +1,22 @@
+// Table Variations
+
+// .table-resizable {
+// }
+
+.last-news__table.table-overflowed {
+  background-color: green;
+
+  td,
+  th {
+    min-width: max-content;
+  }
+
+  @media (max-width: 700px) {
+    // display: block;
+    // overflow: auto;
+    max-width: max-content;
+    overflow-x: scroll;
+    width: max-content;
+    width: 100%;
+  }
+}

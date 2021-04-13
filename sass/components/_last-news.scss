@@ -1,0 +1,85 @@
+// Last News Component
+
+.last-news {
+  &__heading {
+    margin-top: 33px;
+  }
+
+  &__date {
+    margin-top: 24px;
+
+    @media (max-width: 700px) {
+      visibility: hidden;
+    }
+  }
+
+  &__text-intro {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 49px;
+
+    @media (max-width: 700px) {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 22px;
+    }
+  }
+
+  &__image {
+    margin-top: 43px;
+    width: 100%;
+
+    @media (max-width: 700px) {
+      margin-top: 24px;
+    }
+  }
+
+  &__text {
+    color: var(--color-text-grey-1);
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-top: 32px;
+    max-width: 640px;
+
+    @media (max-width: 700px) {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 18px;
+    }
+  }
+
+  &__table {
+    border-collapse: collapse;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 61px;
+    max-width: 100%;
+
+    @media (max-width: 700px) {
+      margin-top: 16px;
+    }
+
+    tr {
+      max-height: 20%;
+    }
+
+    td,
+    th {
+      border: 1px solid var(--color-red);
+      padding: 10px 10px 12px;
+      width: 33.3%;
+    }
+
+    th {
+      background-color: var(--color-red);
+      color: var(--color-white);
+      font-size: 14;
+      font-weight: 700;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+// Swiper Component
+@import '../../node_modules/swiper/swiper-bundle';
+
+.swiper-container {
+  @media (max-width: 700px) {
+    height: 439px;
+    padding-bottom: 40px !important;
+    position: relative;
+  }
+}
+
+.swiper-slide > img {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.swiper-control {
+  opacity: 0.2;
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+
+  @media (max-width: 700px) {
+    visibility: hidden;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__prev {
+    left: 6.25%;
+  }
+
+  &__next {
+    right: 6.25%;
+  }
+}
+
+.swiper-pagination-bullets {
+  margin-bottom: 24px;
+
+  :not(:last-child) {
+    margin-right: 19px !important;
+  }
+
+  @media (max-width: 700px) {
+    bottom: 0;
+    margin-bottom: 0;
+    position: absolute;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color-dark-grey);
+  opacity: 1;
+  z-index: 2;
+
+  @media (max-width: 700px) {
+    background-color: var(--color-red);
+
+    &-active {
+      border: 1px solid var(--color-red);
+    }
+  }
+
+  &-active {
+    background-color: var(--color-white);
+  }
+}
+
+// Swiper Text Component
+
+.swiper-text {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 12.5%;
+  position: absolute;
+  top: 0;
+  top: 0;
+  z-index: 2;
+
+  @media (max-width: 700px) {
+    left: 24px;
+  }
+
+  &__tag {
+    background-color: var(--color-white);
+    border-radius: 13px;
+    color: var(--color-text-dark);
+    font-size: 9px;
+    font-weight: 900;
+    margin-top: 80px;
+    padding: 6px 9px;
+    text-transform: uppercase;
+    width: max-content;
+
+    @media (max-width: 700px) {
+      margin-top: 33px;
+    }
+  }
+
+  &__tagline {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-top: 32px;
+    max-width: 260px;
+  }
+
+  &__main {
+    margin-bottom: 72px;
+    margin-top: auto;
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: 700;
+
+    @media (max-width: 700px) {
+      font-size: 28px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 16px;
+    position: relative;
+
+    @media (max-width: 700px) {
+      margin-top: 24px;
+    }
+
+    &::after {
+      content: url('../assets/images/icons/thin-arrow.svg');
+      left: 72px;
+      position: absolute;
+      top: 2px;
+    }
+
+    &::before {
+      bottom: -15px;
+      content: url('../assets/images/icons/oval.svg');
+      left: 91px;
+
+      position: absolute;
+    }
+  }
+}

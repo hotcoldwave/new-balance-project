@@ -1,0 +1,67 @@
+// Footer Component
+
+.footer {
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  font-family: 'Avenir Next', sans-serif;
+  height: 290px;
+  padding-top: 40px;
+  position: relative;
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-left: 27px;
+    width: 100%;
+  }
+
+  > * {
+    position: absolute;
+
+    @media (max-width: 700px) {
+      position: static;
+    }
+  }
+
+  &__main {
+    left: 6.25%;
+  }
+
+  &__career {
+    left: 37.5%;
+
+    @media (max-width: 900px) {
+      left: 28%;
+    }
+  }
+
+  &__aside {
+    left: 68.75%;
+
+    > *:last-child {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__nav-container {
+    margin-bottom: 55px;
+
+    @media (max-width: 900px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__heading {
+    font-size: 18;
+    font-weight: 500;
+  }
+
+  &__nav {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 8px;
+    opacity: 0.4;
+  }
+}

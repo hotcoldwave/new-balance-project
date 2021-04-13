@@ -1,0 +1,16 @@
+// News Breadcrumbs Component
+
+.last-news-breadcrumbs {
+  display: flex;
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 14px;
+
+  &__item:not(:first-child) {
+    color: var(--color-text-grey-1);
+
+    &::before {
+      content: url('../assets/images/icons/small-arrow.svg');
+      padding: 0 10px;
+    }
+  }
+}

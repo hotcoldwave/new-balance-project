@@ -1,0 +1,46 @@
+.header {
+  align-items: center;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  min-height: 88px;
+  width: 100%;
+
+  &__logo {
+    justify-self: flex-start;
+    margin-left: 59px;
+
+    @media (max-width: 800px) {
+      left: 33px;
+      margin-left: 0;
+      position: absolute;
+
+      img {
+        height: 30px;
+      }
+    }
+  }
+
+  &__open-menu-button,
+  &__close-menu-button {
+    position: absolute;
+  }
+
+  &__open-menu-button {
+    display: none;
+    right: 24px;
+    @media (max-width: 800px) {
+      display: unset;
+    }
+  }
+
+  &__close-menu-button {
+    right: 28px;
+    visibility: hidden;
+  }
+
+  &__nav {
+    justify-self: flex-end;
+    max-width: 81.25%;
+  }
+}
