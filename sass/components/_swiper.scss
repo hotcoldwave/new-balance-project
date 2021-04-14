@@ -4,14 +4,17 @@
 .swiper-container {
   @media (max-width: 700px) {
     height: 439px;
-    padding-bottom: 40px !important;
-    position: relative;
+    padding-bottom: 40px;
   }
 }
 
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+}
+
 .swiper-slide > img {
-  max-width: 100%;
-  min-height: 100%;
+  flex: 1;
   object-fit: cover;
 }
 
