@@ -7,12 +7,18 @@ const initNavbar = () => {
     navbar.classList.add('navigation--active');
     openButton.style.visibility = 'hidden';
     closeButton.style.visibility = 'visible';
+
+    window.onscroll = function () {
+      window.scrollTo(0, 0);
+    };
   };
 
   const hideMenu = () => {
     navbar.classList.remove('navigation--active');
     openButton.style.visibility = 'visible';
     closeButton.style.visibility = 'hidden';
+
+    window.onscroll = function () {};
   };
 
   openButton.addEventListener('click', showMenu);
