@@ -11586,19 +11586,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _scrollFunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(94);
+
+
 const initNavbar = () => {
   const openButton = document.querySelector('.header__open-menu-button');
   const closeButton = document.querySelector('.header__close-menu-button');
   const navbar = document.querySelector('.navigation');
+  const navLinks = document.querySelectorAll('.navigation__link');
 
   const showMenu = () => {
     navbar.classList.add('navigation--active');
     openButton.style.visibility = 'hidden';
     closeButton.style.visibility = 'visible';
 
-    window.onscroll = function () {
-      window.scrollTo(0, 0);
-    };
+    (0,_scrollFunctions__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
   };
 
   const hideMenu = () => {
@@ -11606,14 +11608,77 @@ const initNavbar = () => {
     openButton.style.visibility = 'visible';
     closeButton.style.visibility = 'hidden';
 
-    window.onscroll = function () {};
+    (0,_scrollFunctions__WEBPACK_IMPORTED_MODULE_0__.enableScroll)();
   };
 
   openButton.addEventListener('click', showMenu);
   closeButton.addEventListener('click', hideMenu);
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', hideMenu);
+  });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initNavbar);
+
+
+/***/ }),
+/* 94 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "disableScroll": () => (/* binding */ disableScroll),
+/* harmony export */   "enableScroll": () => (/* binding */ enableScroll)
+/* harmony export */ });
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener(
+    'test',
+    null,
+    Object.defineProperty({}, 'passive', {
+      get: function () {
+        supportsPassive = true;
+      },
+    })
+  );
+} catch (e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent =
+  'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
 
 
 /***/ })
